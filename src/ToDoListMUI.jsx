@@ -18,7 +18,7 @@ const ToDoListMUI = () => {
             setNewItem( (prevValue) => {
             return [...prevValue,item];
         });
-        setItem("");
+        setItem('');
     }
     };
 

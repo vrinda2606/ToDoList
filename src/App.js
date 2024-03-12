@@ -12,10 +12,13 @@ function App() {
   }
 
   const listOfItems = () => {
-    setItems( (prevItems) => {
-      return [...prevItems,inputItems];
+    if(inputItems === ""){
+    } else {
+      setItems( (prevItems) => {
+        return [...prevItems,inputItems];
     });
     setInputItems("");
+    }
   };
 
   const deleteItems = (key) => {

@@ -13,10 +13,13 @@ const ToDoListMUI = () => {
     };
 
     const listOfItems = () => {
-        setNewItem( (prevValue) => {
+        if(item === ""){
+        } else {
+            setNewItem( (prevValue) => {
             return [...prevValue,item];
         });
         setItem("");
+    }
     };
 
     return (<>

@@ -13,11 +13,11 @@ function App() {
 
   const listOfItems = () => {
     if(inputItems === ""){
+
     } else {
-      setItems( (prevItems) => {
-        return [...prevItems,inputItems];
-    });
-    setInputItems("");
+      const allInputData = { id: new Date().getTime().toString() , name : inputItems}
+      setItems( (prevItems) => { return [...prevItems,allInputData]; });
+      setInputItems("");
     }
   };
 
@@ -47,11 +47,14 @@ function App() {
           <button onClick={listOfItems}>+</button>
           <ol>
             {Items.map( (itemValue , index) => {
-              return <List key = {index}
-                           id = {index}
-                           text = {itemValue} 
-                           onSelect = {deleteItems}
-                           />
+              return (
+                <div>
+                <List key = {itemValue.id}
+                      id = {itemValue.id}
+                      text = {itemValue.name}
+                      onSelect = {deleteItems}
+                />
+              </div>)
             })}
           </ol>
          </div>

@@ -54,7 +54,7 @@ input{
   outline: none;
 }
 
-button{
+.toggle{
   min-height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -68,7 +68,7 @@ button{
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
 }
 
-button:hover{
+.toggle:hover{
   background-color: #20bf6b;
 }
 
@@ -116,7 +116,11 @@ ol li{
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
 }
 
-.todo_style .fa-times:hover{
+.todo_style .editIcon:hover{
+  background-color: #20bf6b;
+}
+
+.todo_style .deleteIcon:hover{
   background-color: crimson;
 }
 

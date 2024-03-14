@@ -11,7 +11,7 @@ const List = (props) => {
                 className="editIcon fa fa-times"
                 aria-hidden="true"
                 onClick={ () => {
-                    props.onSelect(props.id);
+                    props.onEdit(props.id);
                 }}
             />
             <DeleteIcon 
